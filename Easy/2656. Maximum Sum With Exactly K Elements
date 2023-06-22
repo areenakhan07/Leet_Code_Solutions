@@ -1,0 +1,15 @@
+class Solution {
+    public int maximizeSum(int[] nums, int k) {
+        Arrays.sort(nums);
+        int sum=0;
+        int n=nums.length;
+        int i=0;
+        while(i<k){
+            sum = nums[n-1] + sum;
+            nums[n-1]=nums[n-1]+1;
+            i++;
+
+        }
+        return sum;
+    }
+}
